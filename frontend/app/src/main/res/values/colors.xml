@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="purple_500">#673AB7</color>
+    <color name="purple_700">#512DA8</color>
+    <color name="purple_200">#BB86FC</color>
+    <color name="purple_100">#E1BEE7</color>
+
+    <!-- Background and Text Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#808080</color>
+
+    <!-- Accent Colors -->
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#4CAF50</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorAccent">#FFC107</color>
+
+    <!-- Card and Button Colors -->
+    <color name="card_background">#FFFFFF</color>
+    <color name="card_stroke">#673AB7</color>
+
+    <!-- Lab Background Colors -->
+    <color name="labStart">#4CAF50</color> <!-- Green 500 -->
+    <color name="labEnd">#81C784</color> <!-- Green 300 -->
+
+    <!-- Activity Room Background Colors -->
+    <color name="activityRoomStart">#FF6F00</color> <!-- Orange 900 -->
+    <color name="activityRoomEnd">#FFA000</color> <!-- Amber 700 -->
+
+    <!-- Classroom Background Colors -->
+    <color name="classroomStart">#2196F3</color> <!-- Blue 500 -->
+    <color name="classroomEnd">#64B5F6</color> <!-- Blue 300 -->
+
+</resources>
