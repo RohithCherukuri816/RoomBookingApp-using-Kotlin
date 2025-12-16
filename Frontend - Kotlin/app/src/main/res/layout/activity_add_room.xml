@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".AddRoomActivity">
+
+    <!-- Top App Bar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/toolbar_gradient"
+        android:elevation="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:title="Add Room"
+        app:titleTextAppearance="@style/TextAppearance.App.Title"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:menu="@menu/top_app_bar_menu" />
+
+    <!-- Room Number -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/roomNumberInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/topAppBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/roomNumberEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Room Number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Block -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/blockInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/roomNumberInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/blockEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Block" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Floor -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/floorInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/blockInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/floorEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Floor"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Capacity -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/capacityInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/floorInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/capacityEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Capacity"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Status -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/statusInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/capacityInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/statusEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Status" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Category Spinner -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/categoryInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/statusInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Spinner
+            android:id="@+id/categorySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Sub-Category Radio Group (Visible for Activity Room or Lab) -->
+    <RadioGroup
+        android:id="@+id/subCategoryRadioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/categoryInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Activity Room Sub-Categories -->
+        <RadioButton
+            android:id="@+id/radioGtidsBoardRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GTIDS Board Room" />
+
+        <RadioButton
+            android:id="@+id/radioOldBoardRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Old Board Room" />
+
+        <RadioButton
+            android:id="@+id/radioB05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B-05" />
+
+        <RadioButton
+            android:id="@+id/radioGalleryHall2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gallery Hall 2" />
+
+        <RadioButton
+            android:id="@+id/radioGalleryHall1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gallery Hall 1" />
+
+        <!-- Lab Sub-Categories (hidden initially, shown dynamically) -->
+        <RadioButton
+            android:id="@+id/radioStLab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ST Lab"
+            android:visibility="gone" />
+
+        <RadioButton
+            android:id="@+id/radioCtLab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CT Lab"
+            android:visibility="gone" />
+
+        <RadioButton
+            android:id="@+id/radioGtm1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GTM-1"
+            android:visibility="gone" />
+
+        <RadioButton
+            android:id="@+id/radioGtm2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GTM-2"
+            android:visibility="gone" />
+
+        <RadioButton
+            android:id="@+id/radioNetworkingLab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Networking Lab"
+            android:visibility="gone" />
+    </RadioGroup>
+
+    <!-- Save Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

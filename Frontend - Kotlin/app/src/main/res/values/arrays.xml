@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="role_options">
+        <item>Admin</item>
+        <item>Floor Manager</item>
+        <item>User</item>
+    </array>
+</resources>
