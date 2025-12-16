@@ -1,8 +1,10 @@
-# 🏢 Room Booking Application
-
 <div align="center">
 
-![Room Booking Banner](https://via.placeholder.com/800x200/2E86AB/FFFFFF?text=Room+Booking+System)
+# 🏢 Room Booking Application
+
+![Room Booking Banner](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=40&pause=1000&color=2E86AB&center=true&vCenter=true&width=800&height=100&lines=🏢+Room+Booking+System;Modern+Spring+Boot+%26+Kotlin+App;Streamline+Your+Workspace)
+
+![Header](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=200&section=header&text=Room%20Booking%20System&fontSize=50&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Spring%20Boot%20%7C%20Kotlin%20%7C%20Android&descAlignY=55&descAlign=50)
 
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.7.4-brightgreen?style=for-the-badge&logo=spring&logoColor=white)](https://spring.io/projects/spring-boot)
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.9+-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)](https://kotlinlang.org/)
