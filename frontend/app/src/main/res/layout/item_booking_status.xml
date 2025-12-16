@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp"
+    app:strokeColor="@color/teal_200"
+    app:strokeWidth="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/booking_card_gradient">
+
+        <!-- Room Name -->
+        <TextView
+            android:id="@+id/roomNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Room Name"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:shadowColor="@color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="2" />
+
+        <!-- Booking Date -->
+        <TextView
+            android:id="@+id/bookingDateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date: dd/MM/yyyy"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="4dp" />
+
+        <!-- Status -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:background="@drawable/status_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status: "
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/statusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirmed"
+                android:textSize="16sp"
+                android:textColor="@color/teal_200"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

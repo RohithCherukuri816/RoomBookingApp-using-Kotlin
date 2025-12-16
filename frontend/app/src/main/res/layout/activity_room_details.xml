@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".RoomDetailsActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Room Details"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:menu="@menu/top_app_bar_menu"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:title="Room Details"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/roomCard"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/roomName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                tools:text="Conference Room"/>
+
+            <TextView
+                android:id="@+id/roomType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                tools:text="Meeting Room"/>
+
+            <TextView
+                android:id="@+id/capacityValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                tools:text="Capacity: 20"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/purpose"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/roomCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Purpose of Booking"
+            tools:text="Team Meeting"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/audienceCount"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/purpose"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Number of Attendees"
+            tools:text="15"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/amenitiesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Available Amenities:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/audienceCount"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"
+        tools:text="Available Amenities:"/>
+
+    <TextView
+        android:id="@+id/amenitiesList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/amenitiesTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:textSize="16sp"
+        tools:text="Projector, Whiteboard, WiFi"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBookNow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Book Now"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:icon="@drawable/ic_confirm"
+        app:iconGravity="start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        tools:text="Book Now"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/menu_browse_rooms"
+        android:icon="@drawable/ic_browse_rooms"
+        android:title="Browse Rooms" />
+    <item
+        android:id="@+id/menu_submit_booking"
+        android:icon="@drawable/ic_submit_booking"
+        android:title="Submit Booking" />
+    <item
+        android:id="@+id/menu_booking_status"
+        android:icon="@drawable/ic_booking_status"
+        android:title="Booking Status" />
+</menu>
